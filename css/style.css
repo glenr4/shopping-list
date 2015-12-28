@@ -1,0 +1,37 @@
+body {
+	width: 60%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+}
+
+ul {
+	padding: 0;
+}
+
+/*Top buttons*/
+#top li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+#top ul{
+	text-align: center;
+}
+
+/*List items*/
+#list li {
+	list-style-type: none;
+	border: solid #000000 1px;
+}
+
+#list {
+	text-align: center;
+}
+
+#list ul {
+	display: inline-block;
+}
