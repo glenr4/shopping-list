@@ -8,6 +8,10 @@ h1 {
 	text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+	font-family: Helvetica, Arial;
+}
+
 ul {
 	padding: 0;
 }
@@ -22,10 +26,26 @@ ul {
 	text-align: center;
 }
 
+#top button {
+	border: solid #0DAFD6 1px;
+	border-radius: 9px;
+	padding: 5px 0px;
+	margin-top: 5px;
+	background-color: #0DAFD6;
+	color: #FFFFFF;
+	width: 120px;
+}
+
 /*List items*/
 #list li {
 	list-style-type: none;
-	border: solid #000000 1px;
+	border: solid #0DAFD6 1px;
+	border-radius: 9px;
+	padding: 5px 10px 5px 10px;
+	margin-top: 5px;
+	background-color: #0DAFD6;
+	color: #FFFFFF;
+	width: 240px;
 }
 
 #list {
@@ -34,4 +54,8 @@ ul {
 
 #list ul {
 	display: inline-block;
+}
+
+.cross {
+	float: right;
 }
