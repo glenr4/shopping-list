@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 		newItem = $(".add [name='item']").val();
 		
+		// addItem(newItem);
 
 		// var newItem = $("<li class=unchecked>");
 		// newItem.innerText = "test";
@@ -34,22 +35,11 @@ $(document).ready(function(){
 		// $("#list ul").append($("<li>").attr("class","unchecked")).innerText("test");
 
 	});
-
-	// When the user hits enter, then add a new item
-	$(document).keyup(function(event){
-		// console.log("keyup" + event.keyCode);
-		if (event.keyCode === 13){
-			// console.log("enter");
-			if ($(".add").focus()){
-				// Create a new item
-				// $("#list ul").append(
-				// $("<li class=unchecked>").append(newItem));
-
-
-			};
-		};
-	});
-
 	
 
 });
+
+function addItem(newItem){
+	$("#list ul").append(
+	$("<li class=unchecked>").append(newItem));	
+};
