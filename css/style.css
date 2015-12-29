@@ -1,11 +1,32 @@
 body {
-	width: 60%;
-	margin: 0 auto;
 	box-sizing: border-box;
+}
+
+header {
+	background-color: #0DAFD6;
+}
+
+.container {
+	margin: 0 auto; /*centre within body*/
+}
+
+@media only screen and (max-width: 320px) {
+	.container {
+		width: 100%; /*use all available space on a small screen*/
+	}
+}
+
+@media only screen and (min-width: 321px) {
+	.container {
+		width: 60%; /*centre content*/
+	}
 }
 
 h1 {
 	text-align: center;
+	color: #FFFFFF;
+	padding: 25px 0px;
+	margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -18,12 +39,12 @@ ul {
 
 /*Top buttons*/
 #top li {
-	list-style-type: none;
-	display: inline-block;
+	list-style-type: none; /*get rid of standard list formatting*/
+	display: inline-block; /*let items display horizontally*/
 }
 
 #top ul{
-	text-align: center;
+	text-align: center; /*centre the items*/
 }
 
 #top button {
@@ -39,23 +60,38 @@ ul {
 /*List items*/
 #list li {
 	list-style-type: none;
-	border: solid #0DAFD6 1px;
 	border-radius: 9px;
 	padding: 5px 10px 5px 10px;
 	margin-top: 5px;
-	background-color: #0DAFD6;
-	color: #FFFFFF;
 	width: 240px;
 }
 
 #list {
-	text-align: center;
+	text-align: center; /*centre the list in the section vertically*/
 }
 
 #list ul {
-	display: inline-block;
+	display: inline-block; /*allows the list to be centred*/
 }
 
 .cross {
 	float: right;
+}
+
+.unchecked {
+	background-color: #0DAFD6; /*light blue*/
+	color: #FFFFFF;
+	border: solid #0DAFD6 1px;
+}
+
+.checked {
+	background-color: #d9e1e2; /*light grey*/
+	color: #FFFFFF;
+	border: solid #d9e1e2 1px;
+	text-decoration: line-through; /*strike through the item text*/
+}
+
+.add {
+	border: solid #0DAFD6 1px;
+	color: #0DAFD6;
 }
