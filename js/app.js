@@ -2,7 +2,7 @@ $(document).ready(function(){
 	// Global variables
 	var newItem = "";
 
-	// Allow user entry to Add item
+	// Create form to allow user entry to Add item
 	$(".add").click(function(){
 		// Clear contents
 		$(".add").empty();
@@ -17,29 +17,22 @@ $(document).ready(function(){
 		$(".add [name='item']").focus();
 	});
 
-	// Get submitted item
-	$(".add").submit(function(){
+	// Add submitted item to list
+	$(".add").submit(function(event){
+		// stop submit from refreshing the page
+		event.preventDefault();
 
-		newItem = $(".add [name='item']").val();
-		
-		// addItem(newItem);
-
-		// var newItem = $("<li class=unchecked>");
-		// newItem.innerText = "test";
-		// newItem.appendTo("#list ul");
-
-
-		// $("#list ul").append("<li class='unchecked'>Test</li>");
-
-
-		// $("#list ul").append($("<li>").attr("class","unchecked")).innerText("test");
-
+		// Append new item to list
+		$("#list ul").append(
+		$("<li class=unchecked>").append(
+				$(".add [name='item']").val()));	
 	});
 	
 
+
+
+
+
+
 });
 
-function addItem(newItem){
-	$("#list ul").append(
-	$("<li class=unchecked>").append(newItem));	
-};
