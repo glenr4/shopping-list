@@ -100,3 +100,7 @@ input:focus {
 	border: none;	/*No border on the input box*/
 	outline: 0;		/*No border on the input box*/
 }
+
+input {
+	height: 1em;	/*set so that the li doesn't get bigger*/
+}
