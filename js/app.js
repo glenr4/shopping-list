@@ -26,16 +26,17 @@ $(document).ready(function(){
 		$("#list li:last-child").remove();
 
 		// Append new item to list
-		var newItem = $("<li class='unchecked'>").append(newItemData);
-		newItem.hide(); //hide to allow fadeIn
-		newItem.appendTo("#list ul");
-		newItem.fadeIn(800);
+		var newItem = $("<li class='unchecked'>").append(newItemData)
+			.append("<span class='cross'></span>")
+			.hide() //hide to allow fadeIn
+			.appendTo("#list ul")
+			.fadeIn(800);
 
 		// Recreate Add Item and slide down from under the appended item above
-		var addItem = $("<li class='add'>").append("Add Item");
-		addItem.css("margin-top","-35px");
-		addItem.appendTo("#list ul");
-		addItem.animate({"margin-top":"5px"}, 800);
+		var addItem = $("<li class='add'>").append("Add Item")
+			.css("margin-top","-35px")
+			.appendTo("#list ul")
+			.animate({"margin-top":"5px"}, 800);
 	});
 	
 	// If the user clicks away when adding an item
@@ -63,11 +64,13 @@ $(document).ready(function(){
 	});
 
 	// Delete an item
-
+	$(document).on("click", ".cross", function(){
+		$(this).parent().remove();
+	})
 
 });
 
+// Restore the add item when the user cancels
 function cancelAdd(){
-	$(".add").empty();
-	$(".add").append("Add Item");
-}
+	$(".add").empty().append("Add Item");
+};

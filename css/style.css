@@ -76,6 +76,12 @@ ul {
 
 .cross {
 	float: right;
+	background-image: url("../images/cross.png");
+	background-repeat: no-repeat;
+	background-size: 1em;
+	height: 1em;
+	width: 1em;
+	margin-top: 1px;
 }
 
 .unchecked {
@@ -103,4 +109,5 @@ input:focus {
 
 input {
 	height: 1em;	/*set so that the li doesn't get bigger*/
+	text-align: center;
 }
