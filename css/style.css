@@ -95,3 +95,8 @@ ul {
 	border: solid #0DAFD6 1px;
 	color: #0DAFD6;
 }
+
+input:focus {
+	border: none;	/*No border on the input box*/
+	outline: 0;		/*No border on the input box*/
+}

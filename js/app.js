@@ -17,6 +17,10 @@ $(document).ready(function(){
 		$(".add [name='item']").focus();
 	});
 
+	// If user 'escapes' from adding an item
+
+
+
 	// Add submitted item to list
 	$(document).on("submit", ".add", function(event){ //Must use on() to bind to new ".add" items
 		// stop submit from refreshing the page
@@ -45,8 +49,17 @@ $(document).ready(function(){
 		addItem.animate({"margin-top":"5px"}, 800);
 	});
 	
+	// Check off an item
+	$(document).on("click", ".unchecked", function(){
+		$(this).fadeOut(800, function(){
+			$(this).attr("class", "checked").fadeIn(800);
+		});
+	});
 
-
+	// Uncheck an item
+	$(document).on("click", ".checked", function(){
+		$(this).attr("class", "unchecked");
+	});
 
 
 
